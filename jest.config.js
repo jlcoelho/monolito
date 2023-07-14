@@ -4,8 +4,9 @@ module.exports = {
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: {
-    '.+\\.ts$': 'ts-jest',
+    '^.+\\.(t|j)sx?$': '@swc/jest',
   },
+  clearMocks: true,
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
   },
